@@ -1,4 +1,4 @@
-#include <algorithm>
+ï»¿#include <algorithm>
 #include <iomanip>
 #include <ios>
 #include <iostream>
@@ -12,18 +12,18 @@ using std::setprecision;	using std::vector;
 
 int main()
 {
-	cout << "Ïîæàëóéñòà, ââåäèòå ñâî¸ èìÿ: ";
+	cout << "ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ²Ð¾Ñ‘ Ð¸Ð¼Ñ: ";
 	string name;
 	cin >> name;
-	cout << "Ïðèâåò, " << name << "!" << endl;
+	cout << "ÐŸÑ€Ð¸Ð²ÐµÑ‚, " << name << "!" << endl;
 
-	cout << "Ïîæàëóéñòà, ââåäèòå îöåíêè ïî ýêçàìåíàì "
-		"â ñåðåäèíå è â êîíöå ñåìåòðà: ";
+	cout << "ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð¿Ð¾ ÑÐºÐ·Ð°Ð¼ÐµÐ½Ð°Ð¼ "
+		"Ð² ÑÐµÑ€ÐµÐ´Ð¸Ð½Ðµ Ð¸ Ð² ÐºÐ¾Ð½Ñ†Ðµ ÑÐµÐ¼ÐµÑ‚Ñ€Ð°: ";
 	double midterm, final;
 	cin >> midterm >> final;
 
-	cout << "Ââåäèòå âñå îöåíêè çà âûïîëíåíèå äîìàøíèõ çàäàíèé, "
-		"çàâåðøèâ ââîä ïðèçíàêîì êîíöà ôàéëà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÑÐµ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð´Ð¾Ð¼Ð°ÑˆÐ½Ð¸Ñ… Ð·Ð°Ð´Ð°Ð½Ð¸Ð¹, "
+		"Ð·Ð°Ð²ÐµÑ€ÑˆÐ¸Ð² Ð²Ð²Ð¾Ð´ Ð¿Ñ€Ð¸Ð·Ð½Ð°ÐºÐ¾Ð¼ ÐºÐ¾Ð½Ñ†Ð° Ñ„Ð°Ð¹Ð»Ð°: ";
 
 	vector<double> homework;
 	double x;
@@ -35,8 +35,8 @@ int main()
 	typedef vector<double>::size_type vec_sz;
 	vec_sz size = homework.size();
 	if (size == 0) {
-		cout << endl << "Íåîõîäèìî ââåñòè îöåíêè äëÿ ðàññ÷åòà. "
-			"Ïîæàëóéñòà, ïîïûòàéòåñü ñíîâà." << endl;
+		cout << endl << "ÐÐµÐ¾Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð²Ð²ÐµÑÑ‚Ð¸ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð´Ð»Ñ Ñ€Ð°ÑÑÑ‡ÐµÑ‚Ð°. "
+			"ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð¿Ð¾Ð¿Ñ‹Ñ‚Ð°Ð¹Ñ‚ÐµÑÑŒ ÑÐ½Ð¾Ð²Ð°." << endl;
 
 		return 1;
 	}
@@ -50,7 +50,7 @@ int main()
 		homework[mid];
 
 	streamsize prec = cout.precision();
-	cout << "Âàøà èòîãîâàÿ îöåíêà ðàâíà " << setprecision(3)
+	cout << "Ð’Ð°ÑˆÐ° Ð¸Ñ‚Ð¾Ð³Ð¾Ð²Ð°Ñ Ð¾Ñ†ÐµÐ½ÐºÐ° Ñ€Ð°Ð²Ð½Ð° " << setprecision(3)
 		<< 0.2 * midterm + 0.4 * final + 0.4 * median
 		<< setprecision(prec) << endl;
 }
