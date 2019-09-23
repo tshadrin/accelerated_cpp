@@ -34,13 +34,9 @@ int main()
 
 	vec_sz mid = size / 2;
 
-	vec_sz mid2 = size % 2 == 0 ?
-		mid / 2 :
-		mid2 = (mid - 1) / 2;
-
-	double q1 = mid % 2 == 0 ?
-		(homework[mid2] + homework[mid2 - 1]) / 2 :
-		homework[mid2];
+	double q1 = mid % 2 == 1 ?
+		homework[mid / 2] :
+		(homework[mid / 2] + homework[(mid / 2) - 1]) / 2;
 	cout << q1 << " Q1" << endl;
 
 	double median;
@@ -49,5 +45,15 @@ int main()
 		homework[mid];
 	cout << median << " Q2" << endl;
 
-//todo Q3
+	if (size % 2 == 1) {
+		double q3 = mid % 2 == 1 ?
+			 homework[mid + (mid / 2 + 1)] :
+			(homework[mid + (mid / 2 + 1)] + homework[mid + (mid / 2)]) / 2;
+		cout << q3 << " Q3" << endl;
+	} else {
+		double q3 = mid % 2 == 1 ?
+			 homework[mid + (mid / 2)] :
+			(homework[mid + (mid / 2)] + homework[mid + (mid / 2 - 1)]) / 2;
+		cout << q3 << " Q3" << endl;
+	}
 }
