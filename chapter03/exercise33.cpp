@@ -1,26 +1,39 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int main()
 {
-	string::size_type min, max;
-	min = max = 0;
+	vector<string> words;
 
 	cout << "Введите кучу слов: ";
-	string x;
+	string word;
 
-	while (cin >> x) {
-		string::size_type len = x.size();
-		if (len < min || min == 0) {
-			min = len;
-		}
-		if (len > max) {
-			max = len;
-		}
+	while (cin >> word) {
+		words.push_back(word);
 	}
 
-	cout << "Минимальный размер значения string: " << min << endl;
-	cout << "Максимальный размер значения string: " << max << endl;
+	sort(words.begin(), words.end());
+
+	int word_count = 1;
+	string last_word = "";
+
+	for (int i = 0; i < words.size(); i++) {
+		if (words[i] == last_word) {
+			word_count++;
+		} else {
+			if (i > 0) {
+				cout << last_word << " встречается " << word_count << " раз" << endl;
+			}
+			word_count = 1;
+			last_word = words[i];
+		}
+
+		if (i == (words.size() - 1)) {
+			cout << last_word << " встречается " << word_count << " раз" << endl;
+		}
+	}
 }

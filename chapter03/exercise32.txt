@@ -1,4 +1,5 @@
-“екст задачи на русском €зыке переведен как попало.
+”пражнение выкинуто из русско€зычного варианта книги (
+
 ќригинальный текст сформулирован следующим образом
 
 Write a program to compute and print the quartiles (that is, the quarter of the numbers with the largest values, the next highest quarter, and so on) of a set of integers.
