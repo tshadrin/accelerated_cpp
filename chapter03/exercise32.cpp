@@ -1,4 +1,4 @@
-#include <algorithm>
+ï»¿#include <algorithm>
 #include <iomanip>
 #include <ios>
 #include <iostream>
@@ -13,7 +13,7 @@ using std::setprecision;	using std::vector;
 int main()
 {
 
-	cout << "Ââåäèòå ÷èñëà äëÿ âû÷èñëåíèÿ êâàíòèëåé ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð° Ð´Ð»Ñ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ ÐºÐ²Ð°Ð½Ñ‚Ð¸Ð»ÐµÐ¹ ";
 
 	vector<double> homework;
 	double x;
@@ -25,7 +25,7 @@ int main()
 	typedef vector<double>::size_type vec_sz;
 	vec_sz size = homework.size();
 	if (size < 4) {
-		cout << endl << "Íåîõîäèìî ââåñòè ìèíèìóì 4 ÷èñëà äëÿ ðàññ÷åòîâ." << endl;
+		cout << endl << "ÐÐµÐ¾Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð²Ð²ÐµÑÑ‚Ð¸ Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼ 4 Ñ‡Ð¸ÑÐ»Ð° Ð´Ð»Ñ Ñ€Ð°ÑÑÑ‡ÐµÑ‚Ð¾Ð²." << endl;
 
 		return 1;
 	}
