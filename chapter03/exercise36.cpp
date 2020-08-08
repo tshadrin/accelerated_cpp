@@ -33,6 +33,11 @@ int wmain()
 		++count;
 		sum += x;
 	}
+	if (count == 0)
+	{
+		cout << "Вы не ввели ни одной оценки за домашние задания";
+		return 1;
+	}
 	streamsize prec = cout.precision();
 	cout << "Ваша итоговая оценка равна " << setprecision(3) 
 		<< 0.2 * midterm + 0.4 * final + 0.4 * sum / count 
