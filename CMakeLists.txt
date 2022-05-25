@@ -3,6 +3,28 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+#add_executable (exercise01 "chapter00/0.1.cpp")
+#add_executable (exercise02 "chapter00/0.2.cpp")
+#add_executable (exercise03  "chapter00/0.3.cpp")
+#add_executable (exercise04  "chapter00/0.4.cpp")
+#add_executable (exercise05  "chapter00/0.5.cpp")
+#add_executable (exercise06  "chapter00/0.6.cpp")
+#add_executable (exercise07  "chapter00/0.7.cpp")
+#add_executable (exercise08  "chapter00/0.8.cpp")
+#add_executable (exercise09  "chapter00/0.9.cpp")
+#add_executable (exercise10  "chapter00/0.10.cpp")
+add_executable (exercise11 "chapter01/1.1.cpp")
+add_executable (exercise12 "chapter01/1.2.cpp")
+add_executable (exercise13  "chapter01/1.3.cpp")
+add_executable (exercise14  "chapter01/1.4.cpp")
+add_executable (exercise141  "chapter01/1.4.1.cpp")
+add_executable (exercise15 "chapter01/1.5.cpp")
+add_executable (exercise151  "chapter01/1.5.1.cpp")
+add_executable (exercise16  "chapter01/1.6.cpp")
+add_executable (listing11  "chapter01/l1.1.cpp")
+add_executable (listing12  "chapter01/l1.2.cpp")
+
+
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (exercise301 "chapter03/exercise301.cpp")
 add_executable (exercise302 "chapter03/exercise302.cpp")
