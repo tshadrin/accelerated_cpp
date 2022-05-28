@@ -1,3 +1,5 @@
+//надеюсь, это то что имел в виду автор
+
 #include <iostream>
 #include <string>
 
@@ -21,20 +23,23 @@ int main()
                 cout << greeting;
                 c += greeting.length();
             } else {
-                if(r == 0 || r == rows - 1 ||
-                   c == 0 || c == cols -1)
+                if(r == 0 || r == rows - 1 || c == 0 || c == cols - 1) {
                     cout << "*";
-                else {
+                    ++c;
+                } else {
                     if(r > pad+1 || r < pad+1 ) {
-                        const std::string spaces{greeting.length() + pad * 2, ' '};
+                        const string spaces(greeting.length() + pad * 2, ' ');
                         cout << spaces;
                         c += spaces.length();
-                    } else
-                        cout << " ";
+                    } else {
+                        const string spaces(pad, ' ');
+                        cout << spaces;
+                        c += spaces.length();
+                    }
                 }
-                ++c;
             }
         }
         cout << endl;
     }
 }
+

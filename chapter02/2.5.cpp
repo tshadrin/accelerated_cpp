@@ -1,3 +1,4 @@
+//Надеюсь, я правильно понял автора
 #include <iostream>
 
 using std::cout; using std::endl;

@@ -9,6 +9,7 @@ int main()
     string name;
     cin >> name;
     const string greeting = "Hello, " + name + "!";
+
     const int pad = 1;
     const int rows = pad * 2 + 3;
     const string::size_type cols = greeting.length() + pad * 2 + 2;
