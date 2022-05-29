@@ -45,4 +45,4 @@ add_executable (exercise36   "chapter03/exercise36.cpp")
 
 add_executable (exercise40 "chapter04/listing01/main.cpp" "chapter04/listing01/grade.cpp" "chapter04/listing01/median.cpp" "chapter04/listing01/Student_info.cpp")
 add_executable (exercise41 "chapter04/exercise41.cpp" "chapter04/listing01/Student_info.cpp")
-# TODO: Добавьте тесты и целевые объекты, если это необходимо.
+
