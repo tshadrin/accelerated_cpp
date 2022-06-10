@@ -23,8 +23,7 @@ int main()
                 cout << greeting;
                 c += greeting.length();
             } else {
-                if(r == 0 || r == rows - 1 ||
-                   c == 0 || c == cols -1)
+                if(r == 0 || r == rows - 1 || c == 0 || c == cols -1)
                     cout << "*";
                 else
                     cout << " ";
