@@ -5,7 +5,6 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include <Windows.h>
 #include "grade.h"
 #include "Student_info.h"
 
@@ -18,9 +17,6 @@ using std::max;				using std::vector;
 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-
 	vector<Student_info> students;
 	Student_info record;
 	string::size_type maxlen = 0;
@@ -33,7 +29,7 @@ int main()
 
 	sort(students.begin(), students.end(), compare);
 
-	for(vector<Student_info>::size_type i = 0; i != students.size(); i++)
+	for (vector<Student_info>::size_type i = 0; i != students.size(); i++)
 	{
 		cout << students[i].name << string(maxlen + 1 - students[i].name.size(), ' ');
 		try {

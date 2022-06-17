@@ -11,7 +11,7 @@ double median(vector<double> vec)
 	vec_sz size = vec.size();
 	if (size == 0)
 	{
-		throw domain_error("Медиана пустого вектора");
+		throw domain_error("РњРµРґРёР°РЅР° РїСѓСЃС‚РѕРіРѕ РІРµРєС‚РѕСЂР°");
 	}
 
 	sort(vec.begin(), vec.end());

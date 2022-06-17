@@ -11,9 +11,9 @@ bool compare(const Student_info& x, const Student_info& y)
 
 istream& read(istream& is, Student_info& s)
 {
-	std::cout << "Ââåäèòå èìÿ ñòóäåíòà è îöåíêè çà ıêçàìåíû â ñåğåäèíå ñåìåñòğà è â êîíöå: ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ¼Ñ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ° Ğ¸ Ğ¾Ñ†ĞµĞ½ĞºĞ¸ Ğ·Ğ° ÑĞºĞ·Ğ°Ğ¼ĞµĞ½Ñ‹ Ğ² ÑĞµÑ€ĞµĞ´Ğ¸Ğ½Ğµ ÑĞµĞ¼ĞµÑÑ‚Ñ€Ğ° Ğ¸ Ğ² ĞºĞ¾Ğ½Ñ†Ğµ: ";
 	is >> s.name >> s.midterm >> s.final;
-	std::cout << "Ââåäèòå îöåíêè çà äîìàøíèå çàäàíèÿ: ";
+	std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¾Ñ†ĞµĞ½ĞºĞ¸ Ğ·Ğ° Ğ´Ğ¾Ğ¼Ğ°ÑˆĞ½Ğ¸Ğµ Ğ·Ğ°Ğ´Ğ°Ğ½Ğ¸Ñ: ";
 	read_hw(is, s.homework);
 	std::cout << std::endl;
 	return is;
