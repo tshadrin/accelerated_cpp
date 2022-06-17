@@ -22,18 +22,18 @@ int main()
 	vector <double> results;
 	string name;
 	
-	cout << "Ââåäèòå èìÿ ñòóäåíòà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ";
 	while(cin >> name && name != "exit")
 	{
 		names.push_back(name);
-		cout << "Ïðèâåò, " << name << "!" << endl;
+		cout << "ÐŸÑ€Ð¸Ð²ÐµÑ‚, " << name << "!" << endl;
 
-		cout << "Ïîæàëóéñòà ââåäèòå îöåíêè ïî ýêçàìåíàì, "
-			"ïðîâåäåííûì â ñåðåäèíå è â êîíöå ñåìåñòðà: ";
+		cout << "ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð° Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð¿Ð¾ ÑÐºÐ·Ð°Ð¼ÐµÐ½Ð°Ð¼, "
+			"Ð¿Ñ€Ð¾Ð²ÐµÐ´ÐµÐ½Ð½Ñ‹Ð¼ Ð² ÑÐµÑ€ÐµÐ´Ð¸Ð½Ðµ Ð¸ Ð² ÐºÐ¾Ð½Ñ†Ðµ ÑÐµÐ¼ÐµÑÑ‚Ñ€Ð°: ";
 		double midterm, final;
 		cin >> midterm >> final;
 
-		cout << "Ââåäèòå îöåíêè çà âûïîëíåíèå äîìàøíèõ çàäàíèé: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð´Ð¾Ð¼Ð°ÑˆÐ½Ð¸Ñ… Ð·Ð°Ð´Ð°Ð½Ð¸Ð¹: ";
 
 		vector <double> homeworks;
 
@@ -47,7 +47,7 @@ int main()
 		vec_sz size = homeworks.size();
 
 		if(size == 0 ) {
-			cout << "Äëÿ ðàññ÷åòîâ íåîáõîäèìî ââåñòè îöåíêè.";
+			cout << "Ð”Ð»Ñ Ñ€Ð°ÑÑÑ‡ÐµÑ‚Ð¾Ð² Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð²Ð²ÐµÑÑ‚Ð¸ Ð¾Ñ†ÐµÐ½ÐºÐ¸.";
 			return 1;
 		}
 		vec_sz middle = size / 2;
@@ -57,7 +57,7 @@ int main()
 		    homeworks[middle];
 		results.push_back(0.2 * midterm + 0.4 * final + 0.4 * median);
 
-		cout << "Ââåäèòå èìÿ ñòóäåíòà èëè íàáåðèòå exit äëÿ çàâåðøåíèÿ ðàññ÷åòîâ: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð¸Ð»Ð¸ Ð½Ð°Ð±ÐµÑ€Ð¸Ñ‚Ðµ exit Ð´Ð»Ñ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¸Ñ Ñ€Ð°ÑÑÑ‡ÐµÑ‚Ð¾Ð²: ";
 	}
 
 	vector <string>::size_type count_students = names.size();
@@ -65,7 +65,7 @@ int main()
 	for(int i=0; i<count_students; i++)
 	{
 		streamsize prec = cout.precision();
-		cout << "Îöåíêà " << names[i] << " íà êîíåö ãîäà: " << setprecision(3) << results[i] << setprecision(prec) << endl;
+		cout << "ÐžÑ†ÐµÐ½ÐºÐ° " << names[i] << " Ð½Ð° ÐºÐ¾Ð½ÐµÑ† Ð³Ð¾Ð´Ð°: " << setprecision(3) << results[i] << setprecision(prec) << endl;
 	}
 
 	return 0;
