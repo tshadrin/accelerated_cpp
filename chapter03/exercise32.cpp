@@ -1,4 +1,20 @@
-﻿#include <algorithm>
+﻿/**
+ * Упражнение выкинуто из русскоязычного варианта книги (
+ *
+ * Оригинальный текст сформулирован следующим образом
+ *
+ * Write a program to compute and print the quartiles (that is, the quarter of the numbers with the largest values,
+ * the next highest quarter, and so on) of a set of integers.
+ *
+ * Напишите программу для вычисления и печати квартилей (то есть четверти чисел с наибольшими значениями,
+ * следующей самой высокой четверти и т. д.) набора целых чисел.
+ *
+ * Надо признать, что задача поставлена не совсем корректно. Я  встречал программу, которая выводит
+ * квартиль целиком(все числа квартиля).
+ * Сам же я ограничусь значениями квартилей, а не полным набором самих чисел.
+ * Еще один вариант был с рассчетами медианы когда значений было меньше четырех)
+ */
+#include <algorithm>
 #include <iomanip>
 #include <ios>
 #include <iostream>
@@ -13,6 +29,9 @@ using std::setprecision;	using std::vector;
 
 int main()
 {
+#ifdef __WIN32
+    system("chcp 65001");
+#endif
 
 	cout << "Введите числа для вычисления квантилей ";
 

@@ -1,17 +1,23 @@
-﻿#include <iomanip>
+﻿/*
+ * В моем случае в Visual Studio 2019 компилируется программа без проблем, но при запуске когда
+ * происходит деление на ноль я получаю
+ * Вызвано исключение по адресу 0x00007FFCCE2AD7D3 (KernelBase.dll) в exercise301.exe: 0x40010005
+ * В macos вместо исключения написано "ваша итоговая оценка равна nan"
+ */
+#include <iomanip>
 #include <ios>
 #include <iostream>
 #include <string>
-#include <Windows.h>
 
 using std::cin;		using std::setprecision;
 using std::cout;	using std::string;
 using std::endl;	using std::streamsize;
 
-int wmain()
+int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+#ifdef __WIN32
+    system("chcp 65001");
+#endif
 
 	cout << "Пожалуйста, введите свое имя: ";
 	string name;

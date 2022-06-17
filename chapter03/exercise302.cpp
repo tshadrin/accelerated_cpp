@@ -12,6 +12,9 @@ using std::setprecision;	using std::vector;
 
 int main()
 {
+#ifdef __WIN32
+    system("chcp 65001");
+#endif
 	cout << "Пожалуйста, введите своё имя: ";
 	string name;
 	cin >> name;

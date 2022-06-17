@@ -1,4 +1,9 @@
-﻿#include <iostream>
+﻿/**
+ * Упражнение достаточно простое, но я сам не додумался до алгоритма подсчета одинаковых слов.
+ * Когда понял, что посчитать слова уже после ввода, тогда задача стала совсем простой.
+ * Не склонял окончания при выводе данных.
+ */
+#include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -7,6 +12,10 @@ using namespace std;
 
 int main()
 {
+#ifdef __WIN32
+    system("chcp 65001");
+#endif
+
 	vector<string> words;
 
 	cout << "Введите кучу слов: ";
@@ -19,7 +28,7 @@ int main()
 	sort(words.begin(), words.end());
 
 	int word_count = 1;
-	string last_word = "";
+	string last_word{};
 
 	for (int i = 0; i < words.size(); i++) {
 		if (words[i] == last_word) {

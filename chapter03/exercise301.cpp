@@ -2,16 +2,16 @@
 #include <ios>
 #include <iostream>
 #include <string>
-#include <Windows.h>
 
 using std::cin;		using std::setprecision;
 using std::cout;	using std::string;
 using std::endl;	using std::streamsize;
 
-int wmain()
+int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+#ifdef __WIN32
+    system("chcp 65001");
+#endif
 
 	cout << "Пожалуйста, введите свое имя: ";
 	string name;
