@@ -65,7 +65,9 @@ int main()
 	for(int i=0; i<count_students; i++)
 	{
 		streamsize prec = cout.precision();
-		cout << "Оценка " << names[i] << " на конец года: " << setprecision(3) << results[i] << setprecision(prec) << endl;
+		cout << "Оценка " << names[i] << " на конец года: "
+        << setprecision(3) << results[i]
+        << setprecision(prec) << endl;
 	}
 
 	return 0;
