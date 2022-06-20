@@ -3,7 +3,7 @@
 int main()
 {
     int k = 0, n = 20;
-    while(k != n) {
+    while (k != n) {
         using std::cout; //сработает только внутри цикла
         cout << "*"; //сработала строка выше
         ++k;

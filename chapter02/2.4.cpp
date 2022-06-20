@@ -16,18 +16,18 @@ int main()
     const string::size_type cols = greeting.length() + pad * 2 + 2;
     cout << endl;
 
-    for(int r = 0; r != rows; ++r) {
+    for (int r = 0; r != rows; ++r) {
         string::size_type c = 0;
-        while(c != cols) {
-            if(r == pad + 1 && c == pad + 1) {
+        while (c != cols) {
+            if (r == pad + 1 && c == pad + 1) {
                 cout << greeting;
                 c += greeting.length();
             } else {
-                if(r == 0 || r == rows - 1 || c == 0 || c == cols - 1) {
+                if (r == 0 || r == rows - 1 || c == 0 || c == cols - 1) {
                     cout << "*";
                     ++c;
                 } else {
-                    if(r > pad+1 || r < pad+1 ) {
+                    if (r > pad+1 || r < pad+1 ) {
                         const string spaces(greeting.length() + pad * 2, ' ');
                         cout << spaces;
                         c += spaces.length();

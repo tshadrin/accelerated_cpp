@@ -9,10 +9,11 @@ int main()
     cout << "Введите два числа: ";
     cin >> a;
     cin >> b;
-    if(a > b)
+    if (a > b) {
         cout << "a > b && a = " << a << endl;
-    else if(a < b)
+    } else if (a < b) {
         cout << "b > a && b = " << b << endl;
-    else
+    } else {
         cout << "a = b" << endl;
+    }
 }

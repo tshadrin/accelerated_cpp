@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-#include <Windows.h>
 
 using std::cin;				using std::sort;
 using std::cout;			using std::streamsize;
@@ -13,9 +12,10 @@ using std::setprecision;	using std::vector;
 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	
+#ifdef __WIN32
+    system("chcp 65001");
+#endif
+
 	const int NUM_HOMEWORKS = 3;
 	
 	vector <string> names;
@@ -23,8 +23,7 @@ int main()
 	string name;
 	
 	cout << "Введите имя студента: ";
-	while(cin >> name && name != "exit")
-	{
+	while (cin >> name && name != "exit") {
 		names.push_back(name);
 		cout << "Привет, " << name << "!" << endl;
 
@@ -37,8 +36,7 @@ int main()
 
 		vector <double> homeworks;
 
-		for (int i = 0; i < NUM_HOMEWORKS; i++)
-		{
+		for (int i = 0; i < NUM_HOMEWORKS; i++) {
 			double hw;
 			cin >> hw;
 			homeworks.push_back(hw);
@@ -46,7 +44,7 @@ int main()
 		typedef vector <double>::size_type vec_sz;
 		vec_sz size = homeworks.size();
 
-		if(size == 0 ) {
+		if (size == 0 ) {
 			cout << "Для рассчетов необходимо ввести оценки.";
 			return 1;
 		}
@@ -62,8 +60,7 @@ int main()
 
 	vector <string>::size_type count_students = names.size();
 
-	for(int i=0; i<count_students; i++)
-	{
+	for (int i=0; i<count_students; i++) {
 		streamsize prec = cout.precision();
 		cout << "Оценка " << names[i] << " на конец года: "
         << setprecision(3) << results[i]

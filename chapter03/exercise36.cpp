@@ -39,8 +39,7 @@ int main()
 		++count;
 		sum += x;
 	}
-	if (count == 0)
-	{
+	if (count == 0) {
 		cout << "Вы не ввели ни одной оценки за домашние задания";
 		return 1;
 	}
