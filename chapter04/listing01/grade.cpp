@@ -13,8 +13,7 @@ double grade(double midterm, double final , double homework)
 
 double grade(double midterm, double final, const std::vector<double>& hw)
 {
-	if (hw.size() == 0)
-	{
+	if (hw.size() == 0) {
 		throw domain_error("Студент не сделал ни одного домашнего задания");
 	}
 	return grade(midterm, final, median(hw));

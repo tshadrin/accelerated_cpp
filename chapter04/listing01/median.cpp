@@ -9,8 +9,7 @@ double median(vector<double> vec)
 	typedef vector<double>::size_type vec_sz;
 
 	vec_sz size = vec.size();
-	if (size == 0)
-	{
+	if (size == 0) {
 		throw domain_error("Медиана пустого вектора");
 	}
 
